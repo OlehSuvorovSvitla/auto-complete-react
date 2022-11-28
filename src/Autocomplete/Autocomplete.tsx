@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useState } from "react";
+import React, { SyntheticEvent, useEffect, useRef, useState } from "react";
 import "./Autocomplete.css";
 import EmptyList from "./EmptyList";
 
@@ -15,6 +15,11 @@ function Autocomplete({ suggestions }: Props): JSX.Element {
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [userInput, setUserInput] = useState("");
+  const activeElement = useRef(null);
+
+  useEffect(() => {
+    activeElement?.current?.scrollIntoView();
+  }, [activeSuggestion]);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const userInput = e.currentTarget.value;
@@ -65,7 +70,8 @@ function Autocomplete({ suggestions }: Props): JSX.Element {
     <ul className="suggestions">
       {filteredSuggestions.map((filteredSuggestion: string, index: number) => (
         <li
-          className={index === activeSuggestion && "suggestion-active"}
+          ref={index === activeSuggestion ? activeElement : null}
+          className={index === activeSuggestion ? "suggestion-active" : null}
           key={filteredSuggestion}
           onClick={() => onClick(filteredSuggestion)}
           dangerouslySetInnerHTML={{
@@ -86,7 +92,7 @@ function Autocomplete({ suggestions }: Props): JSX.Element {
         onKeyDown={onKeyDown}
         value={userInput}
       />
-      {showSuggestions && suggestionsListComponent}
+      {userInput && showSuggestions && suggestionsListComponent}
     </div>
   );
 }

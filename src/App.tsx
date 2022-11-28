@@ -1,20 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Autocomplete from "./Autocomplete/Autocomplete";
+import { getDummyProducts } from "./api";
 
-function App() {
-  const suggestions = [
-    "Alligator",
-    "Bask",
-    "Crocodilian",
-    "Death Roll",
-    "Eggs",
-    "Jaws",
-    "Reptile",
-    "Solitary",
-    "Tail",
-    "Wetlands",
-  ];
+const App = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const data = await getDummyProducts();
+      setData(data);
+    })();
+  }, []);
+  const suggestions = data.map((product) => product.title);
 
   return (
     <div className="App">
@@ -31,6 +29,6 @@ function App() {
       </main>
     </div>
   );
-}
+};
 
 export default App;
