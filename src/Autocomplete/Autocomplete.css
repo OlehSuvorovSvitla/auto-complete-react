@@ -1,0 +1,35 @@
+.App-autocomplete input {
+    font-size: 2em;
+    padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.no-suggestions {
+    padding: 0.5rem;
+}
+
+.suggestions {
+    border: 1px solid gray;
+    border-top-width: 0;
+    list-style: none;
+    margin-top: 0;
+    max-height: 9.5em;
+    overflow-y: auto;
+    padding-left: 0;
+}
+
+.suggestions li {
+    padding: 0.5rem;
+}
+
+.suggestion-active,
+.suggestions li:hover {
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+}
+
+.suggestions li:not(:last-of-type) {
+    border-bottom: 1px solid #999;
+}
