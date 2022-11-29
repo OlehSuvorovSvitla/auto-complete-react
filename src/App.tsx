@@ -12,7 +12,6 @@ const App = () => {
       setData(data);
     })();
   }, []);
-  const suggestions = data.map((product) => product.title);
 
   return (
     <div className="App">
@@ -24,7 +23,7 @@ const App = () => {
       <main className="App-main">
         <div className="App-wrapper">
           <h2>Start typing here:</h2>
-          <Autocomplete suggestions={suggestions} />
+          <Autocomplete suggestions={data} />
         </div>
       </main>
     </div>
