@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Auto-complete component in React TypeScript.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Just `npm start` and check http://localhost:3000/
 
 ## Available Scripts
 
