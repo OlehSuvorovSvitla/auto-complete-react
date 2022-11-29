@@ -1,8 +1,8 @@
-import React, { SyntheticEvent, useEffect, useRef, useState } from "react";
+import React, {FunctionComponent, SyntheticEvent, useEffect, useRef, useState} from "react";
 import "./Autocomplete.css";
 import EmptyList from "./EmptyList";
 
-export interface Props {
+export interface AutocompleteProps {
   suggestions: string[];
 }
 
@@ -10,7 +10,7 @@ interface KeyboardEvent extends SyntheticEvent {
   code: string;
 }
 
-function Autocomplete({ suggestions }: Props): JSX.Element {
+const Autocomplete: FunctionComponent<AutocompleteProps> = ({suggestions}) => {
   const [activeSuggestion, setActiveSuggestion] = useState(0);
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -81,7 +81,7 @@ function Autocomplete({ suggestions }: Props): JSX.Element {
       ))}
     </ul>
   ) : (
-    <EmptyList suggestions={suggestions} />
+    <EmptyList suggestions={suggestions}/>
   );
 
   return (

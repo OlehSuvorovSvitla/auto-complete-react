@@ -1,7 +1,7 @@
-import React from "react";
-import { Props } from "./Autocomplete";
+import React, {FunctionComponent} from "react";
+import {AutocompleteProps} from "./Autocomplete";
 
-export default function EmptyList({ suggestions }: Props) {
+const EmptyList: FunctionComponent<AutocompleteProps> = ({suggestions}) => {
   return (
     <div className="no-suggestions">
       <p>
@@ -17,4 +17,6 @@ export default function EmptyList({ suggestions }: Props) {
       </details>
     </div>
   );
-}
+};
+
+export default EmptyList

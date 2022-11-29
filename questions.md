@@ -42,7 +42,7 @@
 
 > - Promise "eats" exceptions by providing own `.catch()`
 > - Callback usually required `try..except` block
-> - `async...await` is a sugar syntax around Promises
+> - `async...await` is a sugar syntax around Promises which allows to make `try catch finally`
 
 ### 8. How many arguments does setState take and why is it async.
 
@@ -71,4 +71,3 @@
 ### 11. How to render an HTML string coming from the server.
 
 > We can use `dangerouslySetInnerHTML` attribute
-> `src/Autocomplete/Autocomplete.tsx:77`
