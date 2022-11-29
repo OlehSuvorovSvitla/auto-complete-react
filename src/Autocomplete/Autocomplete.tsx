@@ -70,7 +70,7 @@ const Autocomplete: FunctionComponent<AutocompleteProps> = ({
         setActiveSuggestion(activeSuggestion + 1);
       }
     },
-    [userInput]
+    [userInput, activeSuggestion]
   );
 
   const highlightedText = (text, subString) =>
