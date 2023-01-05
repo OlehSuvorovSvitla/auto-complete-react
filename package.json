@@ -1,7 +1,7 @@
 {
-  "name": "input-auto-complete",
-  "version": "0.1.0",
-  "private": true,
+  "name": "olegsuv-react-auto-complete",
+  "version": "1.0.0",
+  "private": false,
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
