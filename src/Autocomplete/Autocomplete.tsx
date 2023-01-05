@@ -35,7 +35,7 @@ const Autocomplete: FunctionComponent<AutocompleteProps> = ({
       setShowSuggestions(true);
       setUserInput(userInput);
     },
-    [userInput]
+    [suggestions]
   );
 
   const onClick = useCallback(
@@ -45,7 +45,7 @@ const Autocomplete: FunctionComponent<AutocompleteProps> = ({
       setShowSuggestions(false);
       setUserInput(suggestionValue);
     },
-    [userInput]
+    []
   );
 
   const onKeyDown = useCallback(
@@ -70,7 +70,7 @@ const Autocomplete: FunctionComponent<AutocompleteProps> = ({
         setActiveSuggestion(activeSuggestion + 1);
       }
     },
-    [userInput, activeSuggestion]
+    [filteredSuggestions, activeSuggestion]
   );
 
   const highlightedText = (text, subString) =>
