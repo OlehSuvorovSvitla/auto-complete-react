@@ -1,41 +1,57 @@
 # Auto-complete component in React TypeScript.
 
-Just `npm start` and check http://localhost:3000/
+# Frontend test
 
-## Available Scripts
+document version: 1.3
 
-In the project directory, you can run:
+## Part 1 (up to 90 minutes)
+Please prepare an auto-complete component in React TypeScript.
+1. You cannot use any 3rd party libraries - only pure React and internal DOM
+functions.
+2. You should use typescript and write proper interfaces and types.
+3. The function to filter the data should be asynchronous. You can use mock data
+(such as a JSON array), but the function which uses it should be asynchronous
+(similar to a real REST call).
 
-### `npm start`
+4. It should have basic working CSS. No need for anything fancy (such as drop-
+shadows etc), but should look decent.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+5. You need to handle all non-standard/edge use-cases - it should have a perfect
+user-experience.
+6. Highlight the matching part of the text, in addition to showing it.
+7. No external state management libraries (refer to #1 as well), only native React
+method.
+8. Use only functional component with hooks.
+9. Shortcuts and hacks are perfectly ok - but you have to add comments on what
+are you doing there and why. You should either write production ready code or
+include comments on what needs to be changed for production.
+10. Add a README.md file explaining how to run the project.
+11. Bonus #1: load data using a real API call to some resource.
+Results need to be in the form of a GitHub repo link.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Part 2 (up to 45 minutes)
 
-### `npm run build`
+Frontend test 2
+Please answer the following questions to the best of your knowledge, in clear
+English. Elaborate and try to demonstrate the React knowledge you have. Feel free
+to give examples and use cases.
+DO NOT USE ANY WEB OR OTHER RESOURCE.
+1. What is the difference between Component and PureComponent? give an
+example where it might break my app.
+2. Context + ShouldComponentUpdate might be dangerous. Can think of why is
+that?
+3. Describe 3 ways to pass information from a component to its PARENT.
+4. Give 2 ways to prevent components from re-rendering.
+5. What is a fragment and why do we need it? Give an example where it might
+break my app.
+6. Give 3 examples of the HOC pattern.
+7. what's the difference in handling exceptions in promises, callbacks and
+async...await.
+8. How many arguments does setState take and why is it async.
+9. List the steps needed to migrate a Class to Function Component.
+10. List a few ways styles can be used with components.
+11. How to render an HTML string coming from the server.
+Results need to be submitted in a questions.md file, in the same
+GitHub repo as part 1.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Good luck!
